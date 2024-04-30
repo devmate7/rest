@@ -1,13 +1,32 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from "next";
+import multer from 'multer';
 
 type Data = {
-  name: string;
+	done: boolean;
+	info?: string;
+	account?: string;
+	name?: string;
 };
 
+const upload = multer();
+
 export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>,
+	req: import('next').NextApiRequest,
+	res: import('next').NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: "John Doe" });
+	if (
+		req.method === 'POST' &&
+		req.headers['content-type']?.startsWith('multipart/form-data')
+	) {
+		const { account, password } = req.body;
+
+		upload.none()(
+			req,
+			res,
+			err => err
+				? res.status(500).json({ done: false, info: err.message })
+				: res.status(200).json({ done: true, account })
+		);
+	}
+
+	res.status(200).json({ done: true, name: 'John Doe' });
 }

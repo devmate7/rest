@@ -1,0 +1,34 @@
+[
+	{
+		"id": "d6602240-e85a-4082-b1e9-92d7e412faf4",
+		"username": "ben",
+		"password": "a12345",
+		"name": "Ben Chen 2",
+		"mail": "ben@gmail.com",
+		"headshot": "https://randomuser.me/api/portraits/men/58.jpg"
+	},
+	{
+		"id": "06f15555-5710-41f1-8a50-bf5622cf377d",
+		"username": "benny",
+		"password": "a12345",
+		"name": "Benny Lin",
+		"mail": "benny@gmail.com",
+		"headshot": "https://randomuser.me/api/portraits/men/14.jpg"
+	},
+	{
+		"id": "73d9f626-e597-43db-b0ac-32dad6f03a72",
+		"username": "tony",
+		"password": "a12345",
+		"name": "Tony Gray",
+		"mail": "tony@gmail.com",
+		"headshot": "https://randomuser.me/api/portraits/men/31.jpg"
+	},
+	{
+		"id": "ef224130-a42d-48a9-ba16-77ef6c7db77b",
+		"username": "alexa",
+		"password": "a12345",
+		"name": "Alexa Rivera",
+		"mail": "alexa.rivera@example.com",
+		"headshot": "https://randomuser.me/api/portraits/women/23.jpg"
+	}
+]
